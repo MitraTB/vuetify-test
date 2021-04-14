@@ -39,19 +39,16 @@
     <section>
       <last-news />
     </section>
-    <div>
+    <div>  
       <v-slider
+        thumb-label="always"
+        thumb-size="50"
+        thumb-color="transparent"
         v-model="ex3.val"
-        :label="ex3.label"
-        thumb-color="#8c9bde"
-        thumb-label
-        color="#8c9bde"
-        track-color="#696585"
-        dark
-        style="width:300px;"
       >
-        <template v-slot:thumb-label="data">
-          <v-icon color="white">mdi-menu-up</v-icon>{{data.val}}
+        <template #thumb-label="data">
+          <div id="aliali" class="ml-4">{{data.value}}</div>
+          <span><h1 class="ml-2">&dtrif;</h1></span>
         </template>
       </v-slider>
     </div>
@@ -96,7 +93,7 @@ section {
 .v-slider--horizontal .v-slider__track-container {
   height: 30px !important;
 }
-.v-slider__thumb{
+.v-slider__thumb {
   width: 0 !important;
   height: 0 !important;
 }
